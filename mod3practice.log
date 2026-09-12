@@ -1,0 +1,15 @@
+mysql> SELECT ShopID, COUNT(*) AS NumberOfDrinksFROM DrinkGROUP BY ShopID;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DrinkGROUP BY ShopID' at line 1
+mysql> SELECT ShopID, COUNT(*) AS NumberOfDrinksFROM Drink GROUP BY ShopID;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Drink GROUP BY ShopID' at line 1
+mysql> SELECT ShopID, COUNT(*) AS NumberOfDrinks FROM Drink GROUP BY ShopID;
++--------+----------------+
+| ShopID | NumberOfDrinks |
++--------+----------------+
+|      1 |              2 |
+|      2 |              2 |
+|      3 |              2 |
++--------+----------------+
+3 rows in set (0.01 sec)
+
+mysql> notee;
